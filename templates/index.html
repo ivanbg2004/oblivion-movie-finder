@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Oblivion Movie Finder - Powered by OD&H</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='assets/favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{ odh.contact_url }}" target="_blank">
+                <img src="{{ odh.logo_url }}" alt="{{ odh.name }} Logo">
+            </a>
+            <h1>{{ odh.name }} Movie Finder</h1>
+        </div>
+        <p class="description">{{ odh.description }}</p>
+        <p class="description">Remake of one 2013 forgotten repository.</p>
+    </header>
+
+    <section class="search-area">
+        <input type="text" id="searchInput" placeholder="Search for a movie...">
+        <button id="searchButton">Search</button>
+    </section>
+
+    <section id="results">
+        <!-- Results will be displayed here -->
+    </section>
+    <br><br><br><br>
+    <footer>
+        <p>&copy; {{ now().year }} {{ odh.name }}. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

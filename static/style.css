@@ -1,0 +1,175 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    background-image: url('/static/assets/ODH-banner.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+
+/* Header Styles */
+header {
+    background: rgba(34, 34, 34, 0.8);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo img {
+    width: 50px;
+    margin-right: 10px;
+    filter: brightness(1.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+header .description {
+    font-style: italic;
+    margin-top: 0.5rem;
+    font-size: 1.1em;
+    color: #ccc;
+}
+
+/* Search Area Styles */
+.search-area {
+    padding: 1rem;
+    background: rgba(51, 51, 51, 0.7);
+    text-align: center;
+    backdrop-filter: blur(5px);
+    margin-bottom: 1rem;
+}
+
+.search-area input[type="text"] {
+    padding: 0.5rem;
+    width: 70%;
+    margin-right: 0.5rem;
+    border: 1px solid #666;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+}
+
+.search-area input[type="text"]::placeholder {
+    color: #999;/
+}
+
+.search-area button {
+    padding: 0.5rem 1rem;
+    background: #555;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search-area button:hover {
+    background: #777;
+}
+
+/* Results Section Styles */
+#results {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 200px;
+    position: relative;
+}
+
+.movie {
+    border: 1px solid #444;
+    margin: 1rem;
+    padding: 1rem;
+    width: 300px;
+    background: #222;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5)
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.movie:hover {
+    transform: scale(1.05);
+}
+
+.movie img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.movie h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Alert Styles */
+.alert {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.alert.error {
+    color: #f8d7da;
+    background-color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.alert.info {
+    color: #d1ecf1;
+    background-color: #0c5460;
+    border-color: #bee5eb;
+}
+
+/* Loading Style */
+.loading {
+    text-align: center;
+    font-style: italic;
+    color: #ccc;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: rgba(34, 34, 34, 0.8);
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
